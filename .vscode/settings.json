@@ -1,0 +1,16 @@
+{
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"eslint.format.enable": true,
+	"eslint.alwaysShowStatus": true,
+	"editor.detectIndentation": true,
+	"typescript.validate.enable": true,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": false
+	},
+	"scss.lint.unknownAtRules": "ignore",
+	"cSpell.enabled": false
+}
