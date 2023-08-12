@@ -19,6 +19,7 @@ import { GraphQLResolver } from './graphql.resolver';
 				origin: '*',
 				credentials: true,
 			},
+			introspection: true,
 		}),
 		// modules
 		// MovieModule,
