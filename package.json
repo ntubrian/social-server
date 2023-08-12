@@ -5,8 +5,8 @@
 	"description": "Nest TypeScript starter repository",
 	"license": "MIT",
 	"scripts": {
-		"postinstall": "prisma generate",
-		"build": "prisma db push && nest build",
+		"postinstall": "prisma generate && prisma db push",
+		"build": "nest build",
 		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
 		"start": "nest start",
 		"dev": "nest start --watch ",
