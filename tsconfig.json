@@ -16,8 +16,8 @@
 		"baseUrl": "./",
 		"outDir": "./dist",
 		"paths": {
-			"@social/movie": ["src/movie/index.ts"],
-			"@social/user": ["src/user/index.ts"]
+			"@social/movie": ["api/movie/index.ts"],
+			"@social/user": ["api/user/index.ts"]
 		}
 		//   "@paap/constant": ["libs/constant/src/index.ts"],
 		//   "@paap/contact-forms": ["libs/contact-forms/src/index.ts"],
