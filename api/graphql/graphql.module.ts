@@ -20,10 +20,10 @@ import { GraphQLResolver } from './graphql.resolver';
 			},
 		}),
 		// modules
-		MovieModule,
+		// MovieModule,
 		UserModule,
-		MovieCommentModule,
-		MovieCommentLikeModule,
+		// MovieCommentModule,
+		// MovieCommentLikeModule,
 	],
 	providers: [GraphQLResolver],
 })
