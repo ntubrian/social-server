@@ -1,7 +1,7 @@
 import * as faker from '@faker-js/faker';
 import { PrismaClient } from '@prisma/client';
-import { MovieInput } from 'api/movie';
-import { UserArgs } from 'api/user/user.args';
+import { MovieInput } from 'src/movie';
+import { UserArgs } from 'src/user/user.args';
 import { hash } from 'bcrypt';
 
 const prisma = new PrismaClient();
