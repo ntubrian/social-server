@@ -5,7 +5,8 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { MovieCommentLikeModule } from 'src/movie-comment-like/movie-comment-like.module';
 import { MovieCommentModule } from 'src/movie-comment/movie-comment.module';
 import { MovieModule } from 'src/movie/movie.module';
-import { UserModule } from 'src/user/user.module';
+import { UserModule } from '../user/user.module';
+
 import { GraphQLHelper } from './graphql.helper';
 import { GraphQLResolver } from './graphql.resolver';
 
