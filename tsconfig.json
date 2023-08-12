@@ -17,7 +17,8 @@
 		"outDir": "./dist",
 		"paths": {
 			"@social/movie": ["api/movie/index.ts"],
-			"@social/user": ["api/user/index.ts"]
+			"@social/user": ["api/user/index.ts"],
+			"@social/prisma": ["prisma/index.ts"]
 		}
 		//   "@paap/constant": ["libs/constant/src/index.ts"],
 		//   "@paap/contact-forms": ["libs/contact-forms/src/index.ts"],

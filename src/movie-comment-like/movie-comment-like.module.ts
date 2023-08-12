@@ -1,5 +1,5 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '@social/prisma';
 import { MovieCommentModule } from 'src/movie-comment/movie-comment.module';
 import { UserModule } from 'src/user/user.module';
 import { MovieCommentLikeResolver } from './movie-comment-like.resolver';
