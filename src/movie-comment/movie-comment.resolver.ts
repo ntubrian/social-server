@@ -1,6 +1,6 @@
 import { Parent, ResolveField, Resolver } from '@nestjs/graphql';
-import { MovieCommentLike } from 'src/movie-comment-like/movie-comment-like.model';
-import { MovieCommentLikeService } from 'src/movie-comment-like/movie-comment-like.service';
+import { MovieCommentLike } from '../movie-comment-like/movie-comment-like.model';
+import { MovieCommentLikeService } from '../movie-comment-like/movie-comment-like.service';
 import { MovieComment } from './movie-comment.model';
 
 @Resolver(() => MovieComment)

@@ -1,10 +1,10 @@
-import { ApolloDriverConfig } from '@nestjs/apollo';
+// import { ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
-import { MovieCommentLikeModule } from 'src/movie-comment-like/movie-comment-like.module';
-import { MovieCommentModule } from 'src/movie-comment/movie-comment.module';
-import { MovieModule } from 'src/movie/movie.module';
+// import { MovieCommentLikeModule } from 'src/movie-comment-like/movie-comment-like.module';
+// import { MovieCommentModule } from 'src/movie-comment/movie-comment.module';
+// import { MovieModule } from 'src/movie/movie.module';
 import { UserModule } from '../user/user.module';
 
 import { GraphQLHelper } from './graphql.helper';
