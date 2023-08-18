@@ -1,6 +1,7 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, UseGuards } from '@nestjs/common';
 
 import { CloudinaryService } from './cloudinary';
+import { ApiKeyAuthGuard } from './auth/strategy/apikey-auth.guard';
 
 @Injectable()
 export class AppService {
