@@ -12,6 +12,7 @@ import { GraphQLHelper } from './graphql.helper';
 import { GraphQLResolver } from './graphql.resolver';
 import { ArticleModule } from '../article/article.module';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { resolve } from 'path';
 
 @Module({
 	imports: [
@@ -22,7 +23,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 			useFactory: () => {
 				return {
-					autoSchemaFile: 'src/graphql/schema.graphql',
+					autoSchemaFile: resolve(process.cwd(), 'src/graphql/schema.graphql'), // process.env === 'development' ? './src/graphql/schema.graphql' :
 					introspection: true,
 					cors: {
 						origin: '*',
