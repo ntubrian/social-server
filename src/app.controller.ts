@@ -8,7 +8,7 @@ import { ApiKeyAuthGuard } from './auth/strategy/apikey-auth.guard';
 export class AppController {
 	constructor(private readonly appService: AppService) {}
 
-	@Get('/')
+	@Get('/u')
 	getHello(): string {
 		return this.appService.getHello();
 	}
