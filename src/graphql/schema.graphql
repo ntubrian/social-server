@@ -1,0 +1,83 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MovieCommentLike {
+  id: String!
+  createdAt: DateTime!
+
+  """User who liked the comment"""
+  userId: String!
+
+  """Comment that was liked"""
+  movieCommentId: String!
+  movieComment: MovieComment!
+  user: User!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type MovieComment {
+  id: String!
+  createdAt: DateTime!
+
+  """Comment that was added"""
+  description: String
+  movieId: String!
+  userId: String!
+  likedBy: [MovieCommentLike!]!
+}
+
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  password: String!
+  role: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  """Description to user's usernaem"""
+  description: String
+}
+
+type Article {
+  id: ID!
+  slug: String!
+  moduleType: ModuleType!
+  stringNodes: String!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+enum ModuleType {
+  ARTICLE
+  ANNOUNCE
+}
+
+type Query {
+  healthCheck: String!
+  getAllUsers: [User!]!
+  getUserById(id: String!): User!
+  getAllArticles: [Article!]!
+  getArticleById(id: String!): Article!
+}
+
+type Mutation {
+  register(
+    """User's name that will be visible"""
+    username: String!
+
+    """User's description"""
+    description: String
+
+    """email"""
+    email: String!
+
+    """password"""
+    password: String!
+  ): User!
+}

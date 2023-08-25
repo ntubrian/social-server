@@ -13,6 +13,7 @@ export class GraphQLHelper {
 			fieldResolverEnhancers: ['filters'],
 			cache: 'bounded',
 			autoSchemaFile: true,
+			autoTransformHttpErrors: true,
 			formatError: (error: ApolloError) => {
 				return {
 					message: GraphQLHelper.getMessage(error),
@@ -29,7 +30,7 @@ export class GraphQLHelper {
 					reply,
 				};
 			},
-			subscriptions: GraphQLHelper.getSubscriptionConfig(),
+			// subscriptions: GraphQLHelper.getSubscriptionConfig(),
 		};
 	}
 

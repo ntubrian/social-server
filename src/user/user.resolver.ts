@@ -1,4 +1,4 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 // import { MovieCommentLike } from 'src/movie-comment-like/movie-comment-like.model';
 // import { MovieCommentLikeService } from 'src/movie-comment-like/movie-comment-like.service';
 // import { MovieComment } from 'src/movie-comment/movie-comment.model';
@@ -6,7 +6,7 @@ import { Query, Resolver } from '@nestjs/graphql';
 import { UserEntity } from './user.entity';
 import { UserService } from './user.service';
 
-@Resolver(() => UserEntity)
+@Resolver()
 export class UserResolver {
 	constructor(
 		// private movieCommentService: MovieCommentService,
@@ -17,6 +17,11 @@ export class UserResolver {
 	@Query(() => [UserEntity])
 	async getAllUsers(): Promise<UserEntity[]> {
 		return this.userService.getAllUsers();
+	}
+
+	@Query(() => UserEntity)
+	async getUserById(@Args('id') id: string): Promise<UserEntity> {
+		return this.userService.getUserById(id);
 	}
 
 	// @ResolveField('movieCommentsUserLeft', () => [MovieComment])
