@@ -22,7 +22,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 			useFactory: () => {
 				return {
-					autoSchemaFile: './src/graphql/schema.graphql',
+					autoSchemaFile: 'src/graphql/schema.graphql',
 					introspection: true,
 					cors: {
 						origin: '*',
