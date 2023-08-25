@@ -23,7 +23,7 @@ import { resolve } from 'path';
 
 			useFactory: () => {
 				return {
-					autoSchemaFile: resolve(process.cwd(), 'src/graphql/schema.graphql'), // process.env === 'development' ? './src/graphql/schema.graphql' :
+					autoSchemaFile: process.env.DEV ? './src/graphql/schema.graphql' : resolve(process.cwd(), '/tmp'), // resolve(process.cwd(), 'src/graphql/schema.graphql'), // process.env === 'development' ? './src/graphql/schema.graphql' :
 					introspection: true,
 					cors: {
 						origin: '*',
