@@ -17,22 +17,17 @@ import { resolve } from 'path';
 @Module({
 	imports: [
 		ConfigModule,
-		GraphQLModule.forRootAsync<ApolloDriverConfig>({
+		GraphQLModule.forRoot({
 			...GraphQLHelper.getApolloDriverConfig(),
-			driver: ApolloDriver,
 
-			useFactory: () => {
-				return {
-					// autoSchemaFile: process.env.DEV ? './src/graphql/schema.graphql' : resolve(process.cwd(), '/tmp'), // resolve(process.cwd(), 'src/graphql/schema.graphql'), // process.env === 'development' ? './src/graphql/schema.graphql' :
-					...(process.env.DEV && { autoSchemaFile: './src/graphql/schema.graphql' }),
-					introspection: true,
-					cors: {
-						origin: '*',
-						credentials: true,
-					},
-					autoTransformHttpErrors: true,
-				};
+			// autoSchemaFile: process.env.DEV ? './src/graphql/schema.graphql' : resolve(process.cwd(), '/tmp'), // resolve(process.cwd(), 'src/graphql/schema.graphql'), // process.env === 'development' ? './src/graphql/schema.graphql' :
+			...(process.env.DEV && { autoSchemaFile: './src/graphql/schema.graphql' }),
+			introspection: true,
+			cors: {
+				origin: '*',
+				credentials: true,
 			},
+			autoTransformHttpErrors: true,
 		}),
 		// modules
 		// MovieModule,
