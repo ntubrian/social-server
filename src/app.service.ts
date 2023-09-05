@@ -10,7 +10,6 @@ export class AppService {
 	}
 
 	async uploadImageToCloudinary(file: Express.Multer.File) {
-		console.log('file', file);
 		return await this.cloudinary.uploadImage(file).catch(() => {
 			throw new BadRequestException('Invalid');
 		});

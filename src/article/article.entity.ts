@@ -7,6 +7,9 @@ export class ArticleEntity {
 	id: string;
 
 	@Field(() => String)
+	title: string;
+
+	@Field(() => String)
 	slug: string;
 
 	@Field(() => ModuleType)

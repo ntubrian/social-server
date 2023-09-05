@@ -46,6 +46,7 @@ type User {
 
 type Article {
   id: ID!
+  title: String!
   slug: String!
   moduleType: ModuleType!
   stringNodes: String!
@@ -62,8 +63,8 @@ type Query {
   healthCheck: String!
   getAllUsers: [User!]!
   getUserById(id: String!): User!
-  getAllArticles: [Article!]!
-  getArticleById(id: String!): Article!
+  articles: [Article!]!
+  article(id: String!): Article!
 }
 
 type Mutation {
@@ -80,4 +81,6 @@ type Mutation {
     """password"""
     password: String!
   ): User!
+  createArticle(slug: String!, moduleType: ModuleType!, stringNodes: String!): Article!
+  updateArticle(slug: String, moduleType: ModuleType, stringNodes: String, id: ID!): Article!
 }

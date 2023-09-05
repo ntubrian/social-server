@@ -6,6 +6,6 @@ import { ApiKeyStrategy } from './strategy/apikey.strategy';
 @Module({
 	imports: [PassportModule],
 	providers: [AuthService, ApiKeyStrategy],
-	exports: [AuthService],
+	exports: [AuthService, ApiKeyStrategy],
 })
 export class AuthModule {}

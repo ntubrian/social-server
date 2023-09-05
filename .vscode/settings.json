@@ -12,5 +12,6 @@
 		"source.fixAll.eslint": false
 	},
 	"scss.lint.unknownAtRules": "ignore",
-	"cSpell.enabled": false
+	"cSpell.enabled": false,
+	"typescript.tsdk": "node_modules/typescript/lib"
 }

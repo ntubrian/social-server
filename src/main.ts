@@ -3,6 +3,7 @@ import { json } from 'express';
 import { AppModule } from './app.module';
 import { BadRequestException, Logger, ValidationPipe } from '@nestjs/common';
 import { ValidationError } from 'class-validator';
+import { ApiKeyAuthGuard } from './auth/strategy/apikey-auth.guard';
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule, { cors: true });

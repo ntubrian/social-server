@@ -7,12 +7,12 @@ export class ArticleResolver {
 	constructor(private readonly articleService: ArticleService) {}
 
 	@Query(() => [ArticleEntity])
-	async getAllArticles(): Promise<ArticleEntity[]> {
+	async articles(): Promise<ArticleEntity[]> {
 		return this.articleService.getAllArticles();
 	}
 
 	@Query(() => ArticleEntity)
-	async getArticleById(@Args('id') id: string): Promise<ArticleEntity> {
+	async article(@Args('id') id: string): Promise<ArticleEntity> {
 		return this.articleService.getArticleById(id);
 	}
 }
