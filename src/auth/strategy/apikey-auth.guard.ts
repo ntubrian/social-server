@@ -8,6 +8,7 @@ export class ApiKeyAuthGuard extends AuthGuard('Apikey') {
 	// ref: https://stackoverflow.com/questions/70644923/nestjs-passport-typeerror-cannot-read-properties-of-undefined-reading-logi
 	getRequest(context: ExecutionContext) {
 		const ctx = GqlExecutionContext.create(context);
+
 		return ctx.getContext().req;
 	}
 }

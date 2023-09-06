@@ -37,6 +37,6 @@ import { GraphQLResolver } from './graphql.resolver';
 		// MovieCommentModule,
 		// MovieCommentLikeModule,
 	],
-	providers: [GraphQLResolver, { provide: APP_GUARD, useClass: ApiKeyAuthGuard }],
+	providers: [GraphQLResolver, ApiKeyAuthGuard], // { provide: APP_GUARD, useClass: ApiKeyAuthGuard }
 })
 export class GraphQLBackendModule {}
