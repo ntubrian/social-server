@@ -8,7 +8,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 // import { MovieModule } from 'src/movie/movie.module';
 import { UserModule } from '../user/user.module';
 
-import { APP_GUARD } from '@nestjs/core';
+// import { APP_GUARD } from '@nestjs/core';
 import { ApiKeyAuthGuard } from 'src/auth/strategy/apikey-auth.guard';
 import { ArticleModule } from '../article/article.module';
 import { GraphQLHelper } from './graphql.helper';

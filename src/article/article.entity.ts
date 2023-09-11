@@ -10,6 +10,9 @@ export class ArticleEntity {
 	title: string;
 
 	@Field(() => String)
+	photoUrl: string;
+
+	@Field(() => String)
 	slug: string;
 
 	@Field(() => ModuleType)

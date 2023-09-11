@@ -36,8 +36,9 @@ model User {
 model Article {
   id        String   @id @default(uuid())
   title     String    @default("")
+  photoUrl  String    @default("")
   slug      String   @unique
-  moduleType ModuleType
+  moduleType ModuleType @default(ARTICLE)
   stringNodes  String
   createdAt DateTime @default(now()) @map(name: "created_at")
   updatedAt DateTime? @updatedAt @map(name: "updated_at")

@@ -28,11 +28,13 @@ export class ArticleService {
 	}
 
 	async updateArticle(args: UpdateArticleArgs): Promise<ArticleEntity> {
+		const { id, moduleType, slug, stringNodes } = args;
+
 		return this.prisma.article.update({
 			where: {
-				id: args.id,
+				id: id,
 			},
-			data: args,
+			data: { moduleType, slug, stringNodes },
 		});
 	}
 }

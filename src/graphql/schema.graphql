@@ -47,6 +47,7 @@ type User {
 type Article {
   id: ID!
   title: String!
+  photoUrl: String!
   slug: String!
   moduleType: ModuleType!
   stringNodes: String!
