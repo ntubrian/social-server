@@ -9,7 +9,7 @@
 	"typescript.validate.enable": true,
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": false
+		"source.fixAll.eslint": "never"
 	},
 	"scss.lint.unknownAtRules": "ignore",
 	"cSpell.enabled": false,

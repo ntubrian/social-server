@@ -4,7 +4,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { AppService } from './app.service';
 import { ApiKeyAuthGuard } from './auth/strategy/apikey-auth.guard';
 
-@UseGuards(ApiKeyAuthGuard)
+// @UseGuards(ApiKeyAuthGuard)
 @Controller()
 export class AppController {
 	constructor(private readonly appService: AppService) {}
